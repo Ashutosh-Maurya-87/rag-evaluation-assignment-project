@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from base import Base
 from sqlalchemy import String, DateTime
 from sqlalchemy.orm import Mapped, mapped_column
+from ..base import Base
 
 
 class Document(Base):

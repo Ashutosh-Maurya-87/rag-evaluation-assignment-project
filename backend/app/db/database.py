@@ -1,8 +1,12 @@
 from sqlalchemy.engine import URL
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from dotenv import load_dotenv
 import os
-from base import Base
+from ..base import Base
+from ..models.document import Document
+
+load_dotenv()
 
 Database_url = URL.create(
     "postgresql+psycopg",
