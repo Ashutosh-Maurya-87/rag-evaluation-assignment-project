@@ -15,5 +15,6 @@ class Document(Base):
     file_type: Mapped[str] = mapped_column(String(100))
     version: Mapped[int] = mapped_column()
     file_hash: Mapped[str] = mapped_column(String(64)) 
+    content_hash: Mapped[str] = mapped_column(String(64))
     status: Mapped[str] = mapped_column(String(100))
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.now)
