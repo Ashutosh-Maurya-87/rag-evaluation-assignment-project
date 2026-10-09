@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import os
 from ..base import Base
 from ..models.document import Document
+from ..models.document_chunk import DocumentChunk
 
 load_dotenv()
 
@@ -16,6 +17,7 @@ Database_url = URL.create(
     port=os.getenv("DB_PORT"),
     database=os.getenv("DB_NAME")
 )
+# print(f"Database URL: {Database_url}")
 
 engine = create_engine(Database_url)
 Base.metadata.create_all(engine)
